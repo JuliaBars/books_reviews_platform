@@ -1,3 +1,6 @@
+from api.v1.permissions import IsAdmin
+from api.v1.serializers.users import (AuthSerializer, TokenSerializer,
+                                      UserSerializer)
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
@@ -7,12 +10,9 @@ from rest_framework.filters import SearchFilter
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
-
-from api.v1.permissions import IsAdmin
-from api.v1.serializers.users import (AuthSerializer, TokenSerializer,
-                                      UserSerializer)
-from api_yamdb.settings import DEFAULT_EMAIL_SUBJECT, DEFAULT_FROM_EMAIL
 from users.models import User
+
+from api_yamdb.settings import DEFAULT_EMAIL_SUBJECT, DEFAULT_FROM_EMAIL
 
 
 class UserViewSet(viewsets.ModelViewSet):

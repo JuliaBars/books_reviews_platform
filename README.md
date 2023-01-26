@@ -4,7 +4,7 @@
 
 <https://github.com/JuliaBars/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg>
 
-Проект собирает отзывы пользователей на произведения.
+Проект собирает отзывы пользователей на произведения
 
 _Благодаря этому проекту можно:_
 

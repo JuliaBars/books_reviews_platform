@@ -39,11 +39,8 @@ jobs:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     needs: tests
-    if:
-      contains('
-        refs/heads/master
-        refs/heads/main
-      ', github.ref)
+    if: 
+      github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
     steps:
       - name: Check out the repo
         # Проверка доступности репозитория Docker Hub для workflow
@@ -63,10 +60,12 @@ jobs:
         with:
           push: true
           tags: juliasnowbars/api_yamdb_final:latest
-          file: Dockerfile
+          file: api_yamdb/Dockerfile
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
+    if: 
+      github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
     steps:
     - name: executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master

@@ -22,7 +22,7 @@ _Репозиторий на Github [ссылка](https://github.com/JuliaBars/
 - Клонируйте проект
 
 ```
-git clone <ссылка>
+git clone git@github.com:JuliaBars/yamdb_final.git
 ```
 
 - Установите и активируйте виртуальное окружение

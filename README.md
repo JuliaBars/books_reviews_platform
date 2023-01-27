@@ -2,7 +2,7 @@
 
 ### ![Я](https://yastatic.net/q/logoaas/v2/Яндекс.svg?circle=black&color=000&first=white)![Практикум](https://yastatic.net/q/logoaas/v2/Практикум.svg?color=000)
 
-<https://github.com/JuliaBars/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg>
+![my workflow](<https://github.com/JuliaBars/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg>)
 
 Проект собирает отзывы пользователей на произведения
 
